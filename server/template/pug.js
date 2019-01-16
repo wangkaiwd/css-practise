@@ -12,8 +12,8 @@ html(lang="en")
     .container 
       .row 
         .col-md-8
-          h1 Hi Luke
-          p This is Scott
+          h1 Hi #{you}
+          p I am #{me}
         .col-md-6
           h3 测试静态页面
 `

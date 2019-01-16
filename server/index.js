@@ -8,7 +8,10 @@ const port = 2334
 // 如果是generator函数会走另外的逻辑 
 app.use(async (ctx, next) => {
   ctx.type = 'text/html;charset=utf-8'
-  ctx.body = pug.render(pugTpl)
+  ctx.body = pug.render(pugTpl, {
+    you: 'koa',
+    me: 'wk'
+  })
 })
 // app.listen : 通过http模块创建服务并监听
 app.listen(port, err => {
