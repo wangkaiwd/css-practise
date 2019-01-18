@@ -18,7 +18,9 @@ const sleep = time => new Promise((resolve, reject) => {
       // 如果选择器没有匹配到任何元素，此方法将会报错
       await page.click('.more', { delay: 1000 })
     }
+    // 传入一个函数在页面上下文中执行
     const result = await page.evaluate(() => {
+      // 这里的内容会在导航到的地址页面中执行
       var $ = window.$
       var $list = $('.list a')
       console.log('list', $list)
@@ -35,7 +37,7 @@ const sleep = time => new Promise((resolve, reject) => {
       }
       return data
     })
+    // 关闭Chromium及其所有页面（如果页面被打开的话）
     await browser.close();
     console.log(result)
-    console.log({ poster: 'https://img3.doubanio.com/view/photo/l_ratio_poster/public/p2543862640.jpg' })
   })();
