@@ -43,5 +43,7 @@ const url = 'https://movie.douban.com/explore#!type=movie&tag=%E7%83%AD%E9%97%A8
   // 关闭Chromium及其所有页面（如果页面被打开的话）
   await browser.close();
   console.log('end visit page')
-  console.log(result)
+  console.log('child', result)
+  process.send(result)
+  process.exit()
 })();
