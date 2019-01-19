@@ -17,7 +17,5 @@
     "pug": "^2.0.3",
     "puppeteer": "^1.11.0"
   },
-  "devDependencies": {
-    "standard-version": "^4.4.0"
-  }
+  "devDependencies": {}
 }
