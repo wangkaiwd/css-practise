@@ -5,6 +5,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- @see:https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing -->
   <title>mastering margin collapsing</title>
   <style>
     body {
@@ -20,6 +21,8 @@
 <body>
 <div class="box"></div>
 <div style="border: 1px solid green"></div>
+<!--0 don't resolve margin combined(collapsed) problem-->
+<!--<div style="border: 0 solid green"></div>-->
 <div class="box"></div>
 <div class="box"></div>
 </body>
